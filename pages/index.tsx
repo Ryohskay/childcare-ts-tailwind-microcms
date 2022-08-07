@@ -11,7 +11,10 @@ export default function Home({ article }: Props) {
     <>
       <div className="grid place-items-center w-full">
         <div className="relative">
-          <img src="/images/photo-ac_com/classroom_miniature_large.jpg" alt="Classroom Miniature"/>
+          <picture>
+            <source src="/images/photo-ac_com/classroom_miniature_large.jpg" type='image/jpeg' />
+            <img src="/images/photo-ac_com/classroom_miniature_large.jpg" alt="Classroom Miniature" />
+          </picture>
           <div className="sm:absolute sm:top-1/2 sm:left-1/2 sm:-translate-x-1/2 sm:-translate-y-1/2">
             <div className="flex">
               <h1 className="text-8xl">For <i className="text-green-500 text-bold">Our</i> Children.</h1>
@@ -35,8 +38,11 @@ export default function Home({ article }: Props) {
         年代別
       </h1>
       <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2">
-        <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
-          <img className="w-full aspect-video object-cover" src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" alt="kindargarten children in uniform" />
+        <div className="rounded overflow-hidden dark:border dark:border-solid dark:border-stone-100 drop-shadow-lg">
+          <picture>
+            <source src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" type='image/jpeg' />
+            <img className="w-full aspect-video object-cover" src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" alt="kindargarten children in uniform" />
+          </picture>
           <div className="px-5 py-2 sm:py-3">
             <p>未就学児</p>
           </div>
@@ -53,7 +59,10 @@ export default function Home({ article }: Props) {
           </div>
         </div>
         <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
-          <img className="w-full aspect-video object-cover" src="/images/burst/teacher-flatlay.webp" alt="teacher's desk" />
+          <picture>
+            <source src="/images/burst/teacher-flatlay.webp" type='image/webp' />
+            <img className="w-full aspect-video object-cover" src="/images/burst/teacher-flatlay.webp" alt="teacher's desk" />
+          </picture>
           <div className="px-5 py-2 sm:py-3">
             <p>進学</p>
           </div>
@@ -67,7 +76,10 @@ export default function Home({ article }: Props) {
           </div>
         </div>
         <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
-          <img className="w-full aspect-video object-cover" src="/images/burst/typed-text-says-work.jpg" alt="Photo of typed text that says work" />
+          <picture>
+            <source src="/images/burst/typed-text-says-work.jpg" type='image/jpeg' />
+            <img className="w-full aspect-video object-cover" src="/images/burst/typed-text-says-work.jpg" alt="Photo of typed text that says work" />
+          </picture>
           <div className="px-5 py-2 sm:py-3">
             <p>仕事</p>
           </div>
@@ -76,7 +88,10 @@ export default function Home({ article }: Props) {
           </div>
         </div>
         <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
-          <img className="w-full aspect-video object-cover" src="/images/burst/parent_baby_holding_hands.jpg" alt="a parent and a baby holding hands" />
+          <picture>
+            <source src="/images/burst/parent_baby_holding_hands.jpg" type='image/jpeg'/>
+            <img className="w-full aspect-video object-cover" src="/images/burst/parent_baby_holding_hands.jpg" alt="a parent and a baby holding hands" />
+          </picture>
           <div className="px-5 py-2 sm:py-3">
             <p>保護者</p>
           </div>
@@ -96,7 +111,7 @@ export default function Home({ article }: Props) {
         <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100" key={article.id}>
           <Link href={`/articles/${article.id}`} passHref>
             <img
-              className="w-full"
+              className="w-full aspect-video object-cover"
               src={article.eye_catch.url}
               alt="Article's eye-catch image"
             />

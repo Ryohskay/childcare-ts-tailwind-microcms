@@ -71,7 +71,7 @@ export default function Home({ article }: Props) {
           <div className="px-5 py-2 sm:py-3">
             <p>仕事</p>
           </div>
-          <div className="px-5 pt-4 pb-2 bg-gray-200">
+          <div className="px-5 pt-4 pb-2 bg-gray-200 dark:bg-gray-500">
             <span className="text-sm">障害者福祉制度を利用したものだけでなくさまざまな形での就職、就業などを案内します。</span>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function Home({ article }: Props) {
           <div className="px-5 py-2 sm:py-3">
             <p>保護者</p>
           </div>
-          <div className="px-5 pt-4 pb-2 bg-gray-200">
+          <div className="px-5 pt-4 pb-2 bg-gray-200 dark:bg-gray-500">
             <span className="text-sm">障害などをもったお子さんの保護者の方に知って頂きたい情報を案内します。</span>
           </div>
         </div>

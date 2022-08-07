@@ -93,18 +93,20 @@ export default function Home({ article }: Props) {
 
        {article.map(article => (
 
-         <div className="rounded overflow-hidden shadow-lg" key={article.id}>
-           <img
-             className="w-full"
-             src={article.eye_catch.url}
-             alt="Article's eye-catch image"
-           />
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100" key={article.id}>
+          <Link href={`/articles/${article.id}`} passHref>
+            <img
+              className="w-full"
+              src={article.eye_catch.url}
+              alt="Article's eye-catch image"
+            />
+          </Link>
 
-           <div className="px-6 py-4">
-             <Link href={`/articles/${article.id}`} passHref>
-               <a>{article.title}</a>
-             </Link>
-           </div>
+          <Link href={`/articles/${article.id}`} passHref>
+            <div className="px-6 py-4">
+              <a className="font-bold">{article.title}</a>
+            </div>
+          </Link>
 
            <div className="px-6 pt-4 pb-2">
            {article.tag && (

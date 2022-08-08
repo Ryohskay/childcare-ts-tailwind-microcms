@@ -49,14 +49,15 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const id = ctx.params?.id;
+  const idExceptArray = id instanceof Array ? id[0] : id;
   const data = await client.get({
     endpoint: 'articles',
-    contentId: id,
-      });
+    contentId: idExceptArray,
+  });
 
   return {
     props: {
       article: data,
-       },
+    },
   };
 };

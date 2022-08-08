@@ -39,13 +39,17 @@ export default function Home({ article }: Props) {
       </h1>
       <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2">
         <div className="rounded overflow-hidden dark:border dark:border-solid dark:border-stone-100 drop-shadow-lg">
-          <picture>
-            <source src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" type='image/jpeg' />
-            <img className="w-full aspect-video object-cover" src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" alt="kindargarten children in uniform" />
-          </picture>
-          <div className="px-5 py-2 sm:py-3">
-            <p>未就学児</p>
-          </div>
+          <Link href="/preschool_care" passHref>
+            <picture>
+              <source src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" type='image/jpeg' />
+              <img className="w-full aspect-video object-cover" src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" alt="kindargarten children in uniform" />
+            </picture>
+          </Link>
+          <Link href="/preschool_care" passHref>
+            <div className="px-5 py-2 sm:py-3">
+              <a>未就学児</a>
+            </div>
+          </Link>
           <div className="px-5 pt-4 pb-2">
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
               幼稚園

@@ -60,6 +60,9 @@ export default function Home({ article }: Props) {
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
               認定こども園
             </span>
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              療育施設
+            </span>
           </div>
         </div>
         <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
@@ -76,6 +79,12 @@ export default function Home({ article }: Props) {
             </span>
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
               大学など
+            </span>
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              特別支援学級
+            </span>
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+              養護学校など
             </span>
           </div>
         </div>

@@ -50,7 +50,7 @@ export default function PreschoolCare({ article }: Props) {
 //   };
   
 export const getStaticProps: GetStaticProps = async () => {
-    const id = '9zhtgcppg' // category id of "更新情報"
+    const id = 'c1lnybipzi' // category id of "未就学児"
 
     const data = await client.get({
       endpoint: 'articles', 

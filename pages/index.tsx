@@ -38,17 +38,21 @@ export default function Home({ article }: Props) {
         年代別
       </h1>
       <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2">
-        <div className="rounded overflow-hidden dark:border dark:border-solid dark:border-stone-100 drop-shadow-lg">
+        <div className="rounded overflow-hidden dark:border dark:border-solid dark:border-stone-100 shadow-lg  hover:text-slate-500 hover:border-2 hover:border-solid hover:border-slate-300">
           <Link href="/preschool_care" passHref>
-            <picture>
-              <source src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" type='image/jpeg' />
-              <img className="w-full aspect-video object-cover" src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" alt="kindargarten children in uniform" />
-            </picture>
+            <a>
+              <picture>
+                <source src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" type='image/jpeg' />
+                <img className="w-full aspect-video object-cover" src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" alt="kindargarten children in uniform" />
+              </picture>
+            </a>
           </Link>
           <Link href="/preschool_care" passHref>
-            <div className="px-5 py-2 sm:py-3">
-              <a>未就学児</a>
-            </div>
+            <a>
+              <p className="px-5 py-2 sm:py-3">
+                未就学児
+              </p>
+            </a>
           </Link>
           <div className="px-5 pt-4 pb-2">
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
@@ -62,14 +66,20 @@ export default function Home({ article }: Props) {
             </span>
           </div>
         </div>
-        <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
-          <picture>
-            <source src="/images/burst/teacher-flatlay.webp" type='image/webp' />
-            <img className="w-full aspect-video object-cover" src="/images/burst/teacher-flatlay.webp" alt="teacher's desk" />
-          </picture>
-          <div className="px-5 py-2 sm:py-3">
-            <p>進学</p>
-          </div>
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100 hover:text-slate-500 hover:border-2 hover:border-solid hover:border-slate-300">
+          <Link href="/students" passHref>
+            <a>
+              <picture>
+                <source src="/images/burst/teacher-flatlay.webp" type='image/webp' />
+                <img className="w-full aspect-video object-cover" src="/images/burst/teacher-flatlay.webp" alt="teacher's desk" />
+              </picture>
+            </a>
+          </Link>
+          <Link href="/students">
+            <a>
+              <p className="px-5 py-2 sm:py-3">進学</p>
+            </a>
+          </Link>
           <div className="px-5 pt-4 pb-2">
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
               小・中学校など
@@ -82,7 +92,7 @@ export default function Home({ article }: Props) {
             </span>              
           </div>
         </div>
-        <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100 hover:text-slate-500 hover:border-2 hover:border-solid hover:border-slate-300">
           <picture>
             <source src="/images/burst/typed-text-says-work.jpg" type='image/jpeg' />
             <img className="w-full aspect-video object-cover" src="/images/burst/typed-text-says-work.jpg" alt="Photo of typed text that says work" />
@@ -90,11 +100,11 @@ export default function Home({ article }: Props) {
           <div className="px-5 py-2 sm:py-3">
             <p>仕事</p>
           </div>
-          <div className="px-5 pt-4 pb-2 bg-gray-200 dark:bg-gray-500">
+          <div className="px-5 pt-4 pb-2 bg-gray-200 dark:bg-slate-600 dark:hover:text-slate-200">
             <span className="text-sm">さまざまな就労支援の制度等や障害者福祉制度を利用したものを含めさまざまな形での就職、就業などを案内します。</span>
           </div>
         </div>
-        <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100 hover:text-slate-500 hover:border-2 hover:border-solid hover:border-slate-300">
           <picture>
             <source src="/images/burst/parent_baby_holding_hands.jpg" type='image/jpeg'/>
             <img className="w-full aspect-video object-cover" src="/images/burst/parent_baby_holding_hands.jpg" alt="a parent and a baby holding hands" />
@@ -102,7 +112,7 @@ export default function Home({ article }: Props) {
           <div className="px-5 py-2 sm:py-3">
             <p>保護者</p>
           </div>
-          <div className="px-5 pt-4 pb-2 bg-gray-200 dark:bg-gray-500">
+          <div className="px-5 pt-4 pb-2 bg-gray-200 dark:bg-slate-600 dark:hover:text-slate-200">
             <span className="text-sm">小さなお子さんの居る家庭の方や障害などをもったお子さんの保護者の方に知って頂きたい情報を案内します。</span>
           </div>
         </div>
@@ -115,7 +125,7 @@ export default function Home({ article }: Props) {
 
        {article.map(article => (
 
-        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100" key={article.id}>
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100 hover:text-slate-400" key={article.id}>
           <Link href={`/articles/${article.id}`} passHref>
             <img
               className="w-full aspect-video object-cover"

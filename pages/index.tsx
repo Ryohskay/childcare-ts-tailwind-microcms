@@ -97,7 +97,7 @@ export default function Home({ article }: Props) {
             <p>仕事</p>
           </div>
           <div className="px-5 pt-4 pb-2 bg-gray-200 dark:bg-gray-500">
-            <span className="text-sm">障害者福祉制度を利用したものだけでなくさまざまな形での就職、就業などを案内します。</span>
+            <span className="text-sm">さまざまな就労支援の制度等や障害者福祉制度を利用したものを含めさまざまな形での就職、就業などを案内します。</span>
           </div>
         </div>
         <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">
@@ -109,7 +109,7 @@ export default function Home({ article }: Props) {
             <p>保護者</p>
           </div>
           <div className="px-5 pt-4 pb-2 bg-gray-200 dark:bg-gray-500">
-            <span className="text-sm">障害などをもったお子さんの保護者の方に知って頂きたい情報を案内します。</span>
+            <span className="text-sm">小さなお子さんの居る家庭の方や障害などをもったお子さんの保護者の方に知って頂きたい情報を案内します。</span>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function Home({ article }: Props) {
           </Link>
 
            <div className="px-6 pt-4 pb-2">
-           {article.tag && (
+           { (article.tag != "") && (
              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
                #{article.tag}
              </span>

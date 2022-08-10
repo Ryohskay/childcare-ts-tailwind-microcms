@@ -52,13 +52,13 @@ export default function Home({ article }: Props) {
           </Link>
           <div className="px-5 pt-4 pb-2">
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-              幼稚園
+              幼稚園など
             </span>
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-              保育園
+              保育園など
             </span>
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-              認定こども園
+              認定こども園など
             </span>
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
               療育施設
@@ -81,11 +81,8 @@ export default function Home({ article }: Props) {
               大学など
             </span>
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-              特別支援学級
-            </span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-              養護学校など
-            </span>
+              特別支援学級・養護学校など
+            </span>              
           </div>
         </div>
         <div className="rounded overflow-hidden drop-shadow-lg dark:border dark:border-solid dark:border-stone-100">

@@ -1,6 +1,6 @@
 import { client } from '../libs/client';
-import Link from 'next/link';
 import type { Article } from '../types/article';
+import Link from 'next/link';
 
 type Props = {
   article: Array<Article>;
@@ -56,13 +56,10 @@ export default function Home({ article }: Props) {
           </Link>
           <div className="px-5 pt-4 pb-2">
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-              幼稚園など
+              幼稚園・保育園・認定こども園など
             </span>
             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-              保育園・認定こども園など
-            </span>
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-              療育施設
+              療育施設など
             </span>
           </div>
         </div>
@@ -126,29 +123,27 @@ export default function Home({ article }: Props) {
        {article.map(article => (
 
         <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100 hover:text-slate-400" key={article.id}>
-          <Link href={`/articles/${article.id}`} passHref>
-            <img
-              className="w-full aspect-video object-cover"
-              src={article.eye_catch.url}
-              alt="Article's eye-catch image"
+          {article.eye_catch && (<Link href={`/articles/${article.id}`} passHref>
+            <img 
+              className="w-full aspect-video object-cover" 
+              src={article.eye_catch.url} 
+              alt="kindargarten children in uniform"
             />
-          </Link>
+          </Link>)}
 
           <Link href={`/articles/${article.id}`} passHref>
             <div className="px-6 py-4">
               <a className="font-bold">{article.title}</a>
             </div>
           </Link>
-
-           <div className="px-6 pt-4 pb-2">
-           { (article.tag != "") && (
-             <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-               #{article.tag}
-             </span>
-           )}
-           </div>
-         </div>
-
+          <div className="px-6 pt-4 pb-2">
+            {article.tag && (
+              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                #{article.tag.name}
+              </span>
+            )}
+          </div>
+        </div>
        ))}
 
      </div>

@@ -19,10 +19,10 @@ export default function PreschoolCare({ article }: Props) {
             <ul className="list-inside">
                 {article.map((article) => (
                     <li key={article.id} className="mt-4 border-2 border-solid border-slate-500 drop-shadow-md">
-                        <img
+                        {article.eye_catch && (<img
                             className="object-cover aspect-video"
                             src={article.eye_catch.url}
-                        />
+                        />)}
                         <Link href={`/articles/${article.id}`} passHref>
                             <a>{article.title}</a>
                         </Link>
@@ -30,7 +30,7 @@ export default function PreschoolCare({ article }: Props) {
                         <div className="px-6 pt-4 pb-2">
                             {article.tag && (
                                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                    #{article.tag}
+                                    #{article.tag.name}
                                 </span>
                             )}
                         </div>

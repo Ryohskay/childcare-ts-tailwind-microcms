@@ -6,10 +6,13 @@ export type Article = {
   revisedAt: string
   title: string
   body: string
-  eye_catch: {
+  eye_catch?: {
     url: string
     height: number
     width: number
   }
-  tag: string
+  tag: {
+    id: string
+    name: string
+  }
 }

@@ -29,7 +29,7 @@ export default function Article({ article }: Props) {
             </div>
           )}
           <div className="mt-2">
-            <div className="text-2xl mt-4 rounded" dangerouslySetInnerHTML={{__html: article.body} } />
+            <div className="text-2xl mt-4 rounded dark:text-slate-900" dangerouslySetInnerHTML={{__html: article.body} } />
           </div>
         </div>
       </div>

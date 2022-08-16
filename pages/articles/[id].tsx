@@ -6,7 +6,7 @@ type Props = {
   article: Article;
 };
 
-export default function Article({ article }: Props) {
+export default function Article({ article }: Props) { // getStaticProps の props に入っている値が自動的に渡される？
   return (
     <>
     <div className="bg-gray-50">
@@ -21,13 +21,16 @@ export default function Article({ article }: Props) {
               {article.title}
             </div>
           </div>
-          {article.tag && (
-            <div className="flex items-center justify-start mt-4 mb-4">
-              <div className="px-2 py-1 font-bold bg-red-400 text-white rounded-lg">
-                #{article.tag.name}
-              </div>
-            </div>
-          )}
+          <div className="flex items-center justify-start mt-4 mb-4">
+            {article.tag.map(function(tagItem, index){
+              return (
+                  <div className="ml-2 px-2 py-1 font-bold bg-red-400 text-white rounded-lg" key={index}>
+                    #{tagItem.name}
+                  </div>
+              
+              )}
+            )}
+          </div>
           <div className="mt-2">
             <div className="text-2xl mt-4 rounded dark:text-slate-900" dangerouslySetInnerHTML={{__html: article.body} } />
           </div>

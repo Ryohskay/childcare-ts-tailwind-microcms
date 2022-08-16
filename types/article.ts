@@ -11,8 +11,8 @@ export type Article = {
     height: number
     width: number
   }
-  tag: {
+  tag: [{
     id: string
     name: string
-  }
+  }]
 }

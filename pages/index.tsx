@@ -137,10 +137,12 @@ export default function Home({ article }: Props) {
             </div>
           </Link>
           <div className="px-6 pt-4 pb-2">
-            {article.tag && (
-              <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                #{article.tag.name}
-              </span>
+          {article.tag.map(function(tagItem, index){
+              return (
+                <span className="ml-2 inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2" key={index}>
+                  #{tagItem.name}
+                </span>
+              )}
             )}
           </div>
         </div>
